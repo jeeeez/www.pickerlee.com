@@ -1,0 +1,9 @@
+{{extend ("./public/base.html.xtpl")}}
+
+
+{{#block ("body")}}
+
+	{{{body}}}
+
+{{/block}}
+

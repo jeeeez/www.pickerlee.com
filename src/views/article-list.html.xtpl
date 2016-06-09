@@ -1,0 +1,11 @@
+{{extend ("./public/base.html.xtpl")}}
+
+
+{{#block ("body")}}
+	<ul>
+		{{#each(articleList,"article","key")}}
+			<li><a title="{{article.title}}" href="/article/{{key}}">{{article.title}}</a></li> 
+		{{/each}}
+	</ul>
+{{/block}}
+

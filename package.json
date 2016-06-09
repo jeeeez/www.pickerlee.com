@@ -1,0 +1,44 @@
+{
+	"name": "www.pickerlee.com",
+	"version": "1.0.0",
+	"description": "picker's blog",
+	"main": "index.js",
+	"scripts": {
+		"start": "NODE_ENV=development supervisor --harmony --timestamp --watch src/ --extensions js,json,xtpl src/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/li2274221/www.pickerlee.com.git"
+	},
+	"keywords": [
+		"picker",
+		"pickerlee",
+		"blog"
+	],
+	"author": "picker",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/li2274221/www.pickerlee.com/issues"
+	},
+	"homepage": "https://github.com/li2274221/www.pickerlee.com#readme",
+	"dependencies": {
+		"koa": "^1.2.0",
+		"koa-router": "^5.4.0",
+		"koa-static": "^2.0.0",
+		"markdown": "^0.5.0",
+		"xtemplate": "^4.5.1",
+		"xtpl": "^3.2.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^6.3.6",
+		"clean-webpack-plugin": "^0.1.9",
+		"gulp-postcss": "^6.1.1",
+		"gulp-sass": "^2.3.1",
+		"gulp-sourcemaps": "^1.6.0",
+		"node-sass-middleware": "^0.9.8",
+		"postcss": "^5.0.21",
+		"postcss-sorting": "^1.5.0",
+		"precss": "^1.4.0"
+	}
+}
