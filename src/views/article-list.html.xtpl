@@ -2,10 +2,19 @@
 
 
 {{#block ("body")}}
-	<ul>
-		{{#each(articleList,"article","key")}}
-			<li><a title="{{article.title}}" href="/article/{{key}}">{{article.title}}</a></li> 
-		{{/each}}
-	</ul>
+	<section class="content article-list">
+		<div class="left">
+			<h2>Blog</h2>
+			<ul class="listing">
+				{{#each(articleList,"article","key")}}
+					<li><a title="{{article.title}}" href="/article/{{key}}">{{article.title}}</a></li> 
+				{{/each}}
+			</ul>
+		</div>
+		<div class="right">
+			<h2>Hey there!</h2>	
+		</div>
+	</section>
+	<a href="https://github.com/li2274221" id="github">Fork me on Github</a>
 {{/block}}
 

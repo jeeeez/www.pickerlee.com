@@ -53,13 +53,14 @@ app.use(function*(next) {
 	}
 });
 
-app.onerror = function(error) {
+app.on('error', error => {
 	console.log(error.stack);
-}
+});
 
 app.listen(3000, error => {
 	if (error) {
-		throw new Error(error);
+		console.log(error.stack);
+		return;
 	}
 	console.log('Listening at http://localhost:3000');
 });

@@ -2,8 +2,6 @@
 
 
 {{#block ("body")}}
-
 	{{{body}}}
-
 {{/block}}
 

@@ -1,0 +1,25 @@
+a {
+        color: inherit;
+        text-decoration: none;
+
+        &:link, &:visited {
+                color: #e22c29;
+        }
+}
+
+body {
+        background-color: #fffefb;
+        padding: 0;
+        margin: 0;
+        color: #333;
+        border-top: 3px solid #e22c29;
+        font-family: "proxima-nova",Helvetica,sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 17px;
+        line-height: 1.5em;
+}
+
+h2 {
+        font-size: 1.5em;
+        margin: 1.2em 0 0.6em;
+}

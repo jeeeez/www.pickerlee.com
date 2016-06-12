@@ -4,7 +4,7 @@
 	"description": "picker's blog",
 	"main": "index.js",
 	"scripts": {
-		"start": "NODE_ENV=development supervisor --harmony --timestamp --watch src/ --extensions js,json,xtpl src/index.js",
+		"start": "gulp & NODE_ENV=development supervisor -n --harmony --timestamp --watch src/ --extensions js,json,xtpl src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -27,12 +27,15 @@
 		"koa-router": "^5.4.0",
 		"koa-static": "^2.0.0",
 		"markdown": "^0.5.0",
+		"normalize.css": "^4.1.1",
+		"normalize.scss": "^0.1.0",
 		"xtemplate": "^4.5.1",
 		"xtpl": "^3.2.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "^6.3.6",
 		"clean-webpack-plugin": "^0.1.9",
+		"gulp-clean": "^0.3.2",
 		"gulp-postcss": "^6.1.1",
 		"gulp-sass": "^2.3.1",
 		"gulp-sourcemaps": "^1.6.0",

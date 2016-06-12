@@ -1,6 +1,4 @@
-body {
-        background-color: #0fddaa;
-        padding: 0;
-        margin: 0;
-        color: #fff;
-}
+@import "../../../node_modules/normalize.scss/normalize.scss";
+
+@import "./public/index";
+@import "./modules/index";

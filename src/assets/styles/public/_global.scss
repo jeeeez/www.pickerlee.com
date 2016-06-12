@@ -1,0 +1,24 @@
+#container {
+        margin: 0 auto 60px;
+        padding: 0 2%;
+}
+
+#header {
+        text-align: center;
+
+        > h1 {
+                border-bottom: none;
+                font-family: "gothic-open-shaded","Adobe Caslon Pro",Caslon,Baskerville,Palatino,"Palatino Linotype","Hoefler Text",Garamond,"URW Palladio L","Book Antiqua",Georgia,serif;
+                font-size: 4em;
+                font-weight: normal;
+                line-height: 1.5em;
+                margin: 40px 0 20px;
+        }
+}
+
+@media (max-width: 800px) {
+        #header > h1 {
+                font-size: 3em;
+                margin: 20px 0 10px;
+        }
+}

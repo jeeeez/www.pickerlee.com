@@ -6,6 +6,11 @@
 	{{{block ("head")}}}
 </head>
 <body>
+	<section id="container">
+		<header id="header">
+			<h1><a href="/">Picker</a></h1>
+		</header>
 	{{{block ("body")}}}
+	</section>
 </body>
 </html>
