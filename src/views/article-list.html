@@ -1,16 +1,15 @@
-{{extend ("./public/base.html.xtpl")}}
+{{include './public/header'}}
 
-
-{{#block ("body")}}
 	<section class="content article-list">
 		<div class="left">
 			<h2>Blog</h2>
 			<ul class="listing">
-				{{#each(articleList,"article","key")}}
+				{{each articleList as article key}}
 					<li>
 						<a title="{{article.title}}" href="/article/{{key}}">{{article.title}}</a>
-						<time datetime="{{article.time}}">{{root.dateFormatter(article.time,'yyyy-MM-dd')}}</time>
-					</li> 
+						<time datetime="{{article.time}}">{{dateFormatter}}</time>
+					</li>
+					 <!-- article.time | dateFormatter:'yyyy-MM-dd' -->
 				{{/each}}
 			</ul>
 		</div>
@@ -19,5 +18,5 @@
 		</div>
 	</section>
 	<a href="https://github.com/li2274221" id="github">Fork me on Github</a>
-{{/block}}
 
+{{include './public/footer'}}
