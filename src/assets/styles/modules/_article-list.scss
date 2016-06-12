@@ -1,3 +1,5 @@
+@import "../public/variables";
+
 .article-list {
         h2 {
                 margin-top: 0.4em;
@@ -9,6 +11,20 @@
 
                 li {
                         list-style: none;
+                        margin: 20px 0;
+
+                        a {
+                                &:link, &:visited {
+                                        font-size: 1.1em;
+                                        font-weight: bold;
+                                        text-decoration: none;
+                                }
+                        }
+
+                        time {
+                                display: block;
+                                color: #666;
+                        }
                 }
         }
 }

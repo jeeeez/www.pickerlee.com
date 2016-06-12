@@ -7,7 +7,10 @@
 			<h2>Blog</h2>
 			<ul class="listing">
 				{{#each(articleList,"article","key")}}
-					<li><a title="{{article.title}}" href="/article/{{key}}">{{article.title}}</a></li> 
+					<li>
+						<a title="{{article.title}}" href="/article/{{key}}">{{article.title}}</a>
+						<time datetime="{{article.time}}">{{article.time}}</time>
+					</li> 
 				{{/each}}
 			</ul>
 		</div>
