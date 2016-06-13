@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "gulp & supervisor -n --use-strict --harmony_default_parameters $(node --v8-options | grep harm | awk '{print $1}' | xargs) --timestamp --watch src/ --extensions js,json,html src/index.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"gulp": "gulp",
 		"server": "forever --use-strict --harmony_default_parameters $(node --v8-options | grep harm | awk '{print $1}' | xargs) --timestamp src/index.js"
 	},
 	"repository": {
