@@ -1,4 +1,3 @@
-const path = require('path');
 const template = require('./../utils/template');
 const markdown = require('markdown').markdown;
 const fileReader = require('./../utils/file-reader');
@@ -11,7 +10,8 @@ router.get('/', function*(next) {
 	yield this.render(`article-list.html`, {
 		title: 'Home of Picker Lee >> www.pickerlee.com',
 		articleList,
-		dateFormatter: (timestamp, format = 'yyyy-MM-dd') => {
+		rootClassName: 'home',
+		dateFormatter: (timestamp, format) => {
 			return dateFormatter(new Date(timestamp), format);
 		}
 	});
@@ -19,17 +19,14 @@ router.get('/', function*(next) {
 
 router.get(`/article/:articleId`, function*(next) {
 	const article = articleList[this.params.articleId];
-	const resource = path.resolve(__dirname, '../resource', article.resource);
 
-	const html = yield fileReader(resource).then(data => {
-		return markdown.toHTML(data.toString());
-	}).catch(error => {
-		return JSON.stringify(error);
-	});
+	const html = yield fileReader(article.resource);
 
 	yield this.render(`article.html`, {
 		title: article.title,
-		body: html
+		article,
+		articleHTML: markdown.toHTML(html),
+		rootClassName: 'markdown-body'
 	});
 });
 

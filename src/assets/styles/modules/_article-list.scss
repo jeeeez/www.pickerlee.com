@@ -27,4 +27,28 @@
                         }
                 }
         }
+
+        .left {
+                float: left;
+                width: 60%;
+        }
+
+        .right {
+                float: right;
+                width: 35%;
+                overflow-x: hidden;
+        }
+}
+
+@media (max-width: $mediaMobileMaxWidth) {
+        .article-list {
+                .left, .right {
+                        float: none;
+                        width: 100%;
+                }
+        }
+}
+
+.home #container {
+        max-width: 1000px;
 }

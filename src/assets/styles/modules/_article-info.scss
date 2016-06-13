@@ -1,0 +1,81 @@
+.content {
+        .post-header {
+                h1 {
+                        text-align: center;
+                        font-size: 1.8em;
+
+                        > a {
+                                color: #333;
+                                text-decoration: none;
+                        }
+                }
+
+                .byline {
+                        font-size: 0.8em;
+                        text-align: center;
+                        color: #999;
+
+                        a {
+                                color: inherit;
+                                text-decoration: underline;
+                        }
+
+                        time {
+                                position: relative;
+                                margin: 0 10px;
+
+                                &:before, &:after {
+                                        display: block;
+                                        content: "\2022";
+                                        position: absolute;
+                                        top: -1px;
+                                }
+
+                                &:before {
+                                        left: -8px;
+                                }
+
+                                &:after {
+                                        right: -8px;
+                                }
+                        }
+
+                        ul.tags {
+                                display: inline-block;
+                                padding: 0;
+
+                                li {
+                                        display: inline-block;
+                                        list-style: none;
+                                }
+                        }
+                }
+        }
+
+        article {
+                margin-top: 1em;
+                font-size: 1em;
+
+                h1 {
+                        font-size: 1.6em;
+                }
+
+                h2 {
+                        font-size: 1.5em;
+                }
+
+                h3 {
+                        font-size: 1.4em;
+                }
+
+                h4 {
+                        font-size: 1.3em;
+                }
+        }
+}
+
+.markdown-body {
+        #container {
+                max-width: 700px;
+        }
+}

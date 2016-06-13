@@ -15,7 +15,14 @@
 			</ul>
 		</div>
 		<div class="right">
-			<h2>Hey there!</h2>	
+			<h2>Hey there!</h2>
+			<div class="about-me">
+				<p>I'm <strong>Picker Lee</strong> and this is my blog.</p>
+				<p>Read my <a href="/about/" class="strong">bio</a> and <a href="/resume/" class="strong">résumé</a>.
+      				<br>Follow me on <a href="https://github.com/li2274221">Github</a>.
+      				<br>Send me email at <a href="mailto:li2274221@gmail.com">li2274221@gmail.com</a>.
+    			</p>
+			</div>
 		</div>
 	</section>
 	<a href="https://github.com/li2274221" id="github">Fork me on Github</a>

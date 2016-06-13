@@ -1,25 +1,16 @@
 /**
- * 或者使用 co-fs 模块读取文件内容
  * @see https://github.com/tj/co-fs
  */
 
-const fs = require('fs');
+const fs = require('co-fs');
+const path = require('path');
+const fetch = require('node-fetch');
 
 module.exports = filePath => {
-	return new Promise((resolve, reject) => {
-		if (!fs.existsSync(filePath)) {
-			return reject({
-				status: 'ERROR',
-				code: '404',
-				message: `文件${filePath}不存在`
-			});
-		}
-		fs.readFile(filePath, (error, data) => {
-			if (error) {
-				reject(error);
-				return;
-			}
-			resolve(data);
-		});
-	});
+	if (filePath.includes('http')) {
+		return fetch(filePath).then(res => res.text());
+	} else {
+		filePath = path.resolve(__dirname, '../resource', filePath);
+		return fs.readFile(filePath, 'utf-8');
+	}
 }

@@ -1,4 +1,5 @@
 @import "./placeholder";
+@import "./variables";
 
 #container {
         margin: 0 auto 60px;
@@ -18,7 +19,7 @@
         }
 }
 
-@media (max-width: 800px) {
+@media (max-width: $mediaMobileMaxWidth) {
         #header > h1 {
                 font-size: 3em;
                 margin: 20px 0 10px;
@@ -27,4 +28,26 @@
 
 .clearfix {
         @extend %clearfix;
+}
+
+#github {
+        display: block;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 50px;
+        left: -75px;
+        background-color: #e43936;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 2px 80px;
+        text-align: center;
+        box-shadow: #999 1px 1px 4px;
+        text-shadow: #666 1px 1px 1px;
+}
+
+@media (max-width: $mediaMobileMaxWidth) {
+        #github {
+                display: none;
+        }
 }

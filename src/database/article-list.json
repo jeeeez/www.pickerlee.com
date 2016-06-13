@@ -1,14 +1,10 @@
 {
-	"yoyoyo1": {
+	"wechat-signature-server": {
 		"resource": "yoyoyo.md",
 		"type": "markdown",
-		"title": "I'm running for the Node.js Board of Directors",
-		"time": 1465716375338
-	},
-	"yoyoyo2": {
-		"resource": "yoyoyo.md",
-		"type": "markdown",
-		"title": "Yo what's up woman",
-		"time": 1465716375338
+		"title": "微信 JS-SDK 签名服务",
+		"time": "2016-01-05",
+		"author": "Picker Lee",
+		"tags": ["nodejs", "wechat1"]
 	}
 }

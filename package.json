@@ -4,9 +4,8 @@
   "description": "picker's blog",
   "main": "index.js",
   "scripts": {
-    "start": "gulp & NODE_ENV=development supervisor -n --use-strict $(node --v8-options | grep harm | awk '{print $1}' | xargs) --timestamp --watch src/ --extensions js,json,html src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node --use-strict $(node --v8-options | grep harm | awk '{print $1}' | xargs) src/index.js"
+    "start": "gulp & supervisor -n --use-strict --harmony_default_parameters $(node --v8-options | grep harm | awk '{print $1}' | xargs) --timestamp --watch src/ --extensions js,json,html src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,25 +23,28 @@
   },
   "homepage": "https://github.com/li2274221/www.pickerlee.com#readme",
   "dependencies": {
+    "date-formatter": "https://github.com/li2274221/date-formatter.git",
+    "github-markdown-css": "^2.3.0",
     "koa": "^1.2.0",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "markdown": "^0.5.0",
-    "normalize.css": "^4.1.1",
     "normalize.scss": "^0.1.0",
     "xtemplate": "^4.5.1",
-    "xtpl": "^3.2.0",
-    "date-formatter": "https://github.com/li2274221/date-formatter.git"
+    "xtpl": "^3.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
     "clean-webpack-plugin": "^0.1.9",
+    "co-fs": "^1.2.0",
+    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
+    "node-fetch": "^1.5.3",
     "node-sass-middleware": "^0.9.8",
     "postcss": "^5.0.21",
     "postcss-sorting": "^1.5.0",

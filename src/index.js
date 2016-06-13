@@ -10,6 +10,7 @@ xtemplate(app, {
 
 const koaStatic = require('koa-static');
 app.use(koaStatic(path.join(__dirname, '../build/assets')));
+app.use(koaStatic(path.join(__dirname, '../node_modules')));
 
 const router = require('./router');
 
