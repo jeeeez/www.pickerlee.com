@@ -10,7 +10,7 @@ module.exports = filePath => {
 	if (filePath.includes('http')) {
 		return fetch(filePath).then(res => res.text());
 	} else {
-		filePath = path.resolve(__dirname, '../resource', filePath);
+		filePath = path.resolve(__dirname, '../assets/resources', filePath);
 		return fs.readFile(filePath, 'utf-8');
 	}
 }

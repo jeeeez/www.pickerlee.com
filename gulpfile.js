@@ -9,11 +9,11 @@ gulp.task('clean', function() {
 });
 
 gulp.task('sass:watch', function() {
-	gulp.watch('./src/**/*.scss', ['css']);
+	gulp.watch('./assets/**/*.scss', ['css']);
 });
 
 gulp.task('css', ['clean'], function() {
-	return gulp.src('./src/**/*.scss')
+	return gulp.src('./assets/**/*.scss')
 		.pipe(sourcemaps.init({
 			loadMaps: true
 		}))
@@ -23,7 +23,7 @@ gulp.task('css', ['clean'], function() {
 			browsers: ['last 2 versions']
 		}), require('postcss-sorting')(), require('precss')]))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./build'));
+		.pipe(gulp.dest('./build/assets/'));
 });
 
 gulp.task('default', ['css', 'sass:watch']);
