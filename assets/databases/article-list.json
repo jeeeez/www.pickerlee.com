@@ -1,10 +1,18 @@
 {
 	"wechat-signature-server": {
-		"resource": "yoyoyo.md",
+		"resource": "wechat-signature-server.md",
 		"type": "markdown",
 		"title": "微信 JS-SDK 签名服务",
 		"time": "2016-01-05",
 		"author": "Picker Lee",
 		"tags": ["nodejs", "wechat1"]
+	},
+	"ss-panel": {
+		"resource": "ss-panel.md",
+		"type": "markdown",
+		"title": "Shadowsocks 多用户管理系统 — ss-panel 安装教程",
+		"time": "2016-07-28",
+		"author": "Picker Lee",
+		"tags": ["shadowsocks", "ss-panel"]
 	}
 }
