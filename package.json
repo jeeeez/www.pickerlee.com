@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "connect-livereload": "^0.5.4",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-postcss": "^6.1.1",

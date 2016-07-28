@@ -9,6 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="/github-markdown-css/github-markdown.css">
 	<link rel="stylesheet" type="text/css" href="/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:5500/style.css">
 	{{{block ("head")}}}
 </head>
 <body class="{{rootClassName}}">

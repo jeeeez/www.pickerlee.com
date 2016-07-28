@@ -19,6 +19,17 @@ app.use(convert(logger()));
 app.use(convert(require('koa-static')(__dirname + '/build/assets')));
 app.use(convert(require('koa-static')(__dirname + '/node_modules')));
 
+// livereload
+// import connectLivereload from 'connect-livereload';
+// const connectLivereloadInstance = connectLivereload({
+// 	port: 5500,
+// 	exclude: ['.css']
+// });
+
+app.use(async(ctx, next) => {
+	connectLivereloadInstance(ctx.req, ctx.res, next);
+});
+
 app.use(views(__dirname + '/views', {
 	extension: 'html.xtpl'
 }));
